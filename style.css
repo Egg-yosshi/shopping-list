@@ -1,0 +1,135 @@
+/* 基本スタイル */
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* フォームのスタイル */
+#add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#add-form input {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+#add-form input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#item-name {
+    flex-grow: 1; /* 名前入力欄を広げる */
+}
+
+#item-quantity {
+    width: 60px;
+}
+
+#add-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#add-form button:hover {
+    background-color: #2980b9;
+}
+
+/* リストのスタイル */
+#shopping-list {
+    list-style: none;
+    padding: 0;
+}
+
+#shopping-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* チェックされたアイテムのスタイル */
+#shopping-list li.checked .item-text {
+    text-decoration: line-through;
+    color: #95a5a6;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer; /* クリックでチェックできるように */
+}
+
+.item-text {
+    font-size: 18px;
+}
+
+.item-quantity-badge {
+    background-color: #95a5a6;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 14px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

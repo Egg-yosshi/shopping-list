@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お買い物リスト</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fontsでおしゃれなフォントを読み込む -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>家族のお買い物リスト</h1>
+        </header>
+        <main>
+            <form id="add-form">
+                <input type="text" id="item-name" placeholder="買うもの（例：牛乳）" required>
+                <input type="number" id="item-quantity" placeholder="数" value="1" min="1">
+                <button type="submit">追加</button>
+            </form>
+            <ul id="shopping-list">
+                <!-- ここにJavaScriptでリストが追加される -->
+            </ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
